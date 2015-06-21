@@ -16,9 +16,15 @@ if (isset($_SERVER["REQUEST_URI"])) {
 
 define('ROOT', dirname(__FILE__).DIRECTORY_SEPARATOR);
 define('HTTP', '//'.$_SERVER['SERVER_NAME']);
-echo('<pre>'.ROOT.'<br />'.HTTP.'</pre>');
-echo('<pre>'.print_r($URL_PARAMS,true).'</pre>');
-//echo(file_exists(ROOT.'etc/init.php') ? 1:0);
-//require(ROOT.'etc/init.php');
+
+if(true) {
+	echo('<pre>');
+	echo(ROOT.'<br />'.HTTP.'<hr />');
+	$initphp = ROOT."etc/init.php";
+	echo($initphp." exists > ".file_exists($initphp));
+	echo('<hr />'.print_r($URL_PARAMS,true));
+	echo('</pre>');
+}
+else require(ROOT.'etc/init.php');
 //require(ROOT.'etc/service.php');
 ?>
