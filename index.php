@@ -17,7 +17,7 @@ if (isset($_SERVER["REQUEST_URI"])) {
 define('ROOT', dirname(__FILE__).DIRECTORY_SEPARATOR);
 define('HTTP', '//'.$_SERVER['SERVER_NAME']);
 
-if(true) {
+if(0) {
 	echo('<pre>');
 	echo(ROOT.'<br />'.HTTP.'<hr />');
 	$initphp = ROOT."etc/init.php";

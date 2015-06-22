@@ -14,5 +14,6 @@ $Smarty->config_dir = ROOT.'tpl/cfg/';
 // chmod($Smarty->compile_dir, 0777);
 // chmod($Smarty->cache_dir, 0777);
 
-$Smarty->assign('ROOT',HTTP);
+$Smarty->assign('ROOT', HTTP);
+$Smarty->display('index.tpl');
 ?> 
