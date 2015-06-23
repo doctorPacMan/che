@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+.clearfix {*zoom: 1}
+.clearfix:before,
+.clearfix:after {
+    content: ' ';
+    display: table;
+}
+.clearfix:after {clear: both}
+.bgrchess {
+    background: 
+        linear-gradient(135deg, transparent 75%, rgba(255, 255, 255, .4) 0%) 0 0,
+        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, .4) 0%) 12px 12px,
+        linear-gradient(135deg, transparent 75%, rgba(255, 255, 255, .4) 0%) 12px 12px,
+        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, .4) 0%) 0 0,
+        transparent;
+    background-size: 24px 24px;    
+}
+
+.cimg {
+    width: 600px;
+    height: 600px;
+    line-height: 600px;
+    border: 1px solid red;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+.cimg:before {}
+.cimg img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-crop-w,
+.img-crop-h,
+.img-crop-w i 
+.img-crop-h i {
+    display: inline-block;
+    position: relative;
+    left: 0; top: 0;
+    overflow: hidden;
+    text-align: center;
+}
+.img-crop-w,
+.img-crop-h {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 0 3px green;
+}
+.img-crop-w i,
+.img-crop-h i {
+    position: absolute;
+    left: 50%; top:50%;
+    width: 640px;
+    height: 640px;
+    line-height: 640px;
+    margin: -320px 0 0 -320px;
+    vertical-align: middle;
+}
+.img-crop-w i img,
+.img-crop-h i img {
+    max-height: 100%; width: auto;
+    max-width: 100%; height: auto;
+}
+.img-crop-w i {
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+}
+.img-crop-h i {
+    top: 0;
+    margin-top: 0;
+    height: 100%;
+    line-height: 100%;
+}
+/*
+.img-crcl,
+.img-crcl i {
+    display: inline-block;
+    position: relative;
+    left: 0; top: 0;
+    overflow: hidden;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+.img-crcl {
+    border-radius: 50%;
+}
+.img-crcl i {
+}
+.img-crcl img {
+    width: auto;
+    height: auto;
+    height: 100%;
+}
+
+
+/* ==========================================================================
+   Popup
+   ========================================================================== */
+div.pop {
+    position: fixed;
+    z-index: 500;
+    width: 400px; left: 50%;
+    height: 225px; top: 50%;
+    padding: 12px;
+    margin: -124px 0 0 -212px;
+    font: 16px 'Tahoma';
+    background: rgb(0,128,128);
+    box-shadow: 12px 12px 0px rgba(0,0,0,.75),
+                inset 0 0 0 1px rgba(255,255,255,.5);
+}

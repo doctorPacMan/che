@@ -2,6 +2,7 @@
 @import 'lib/font-awesome.css';
 @import 'lib/normalize.css';
 @import 'lib/lib.css';
+@import 'lib/form.css';
 html, body {
     min-height: 100%;
     padding: 0;
@@ -9,18 +10,17 @@ html, body {
 }
 body {
     position: relative;
-    background: rgb(48,49,52);
-    color: rgb(235,235,235);
-    font: 1em/1.4 'Arial', sans-serif;
+    background: rgb(230,230,230);
+    color: rgb(51,51,51);
+    font: 1em/1.4 'Helvetica','Arial',sans-serif
 }
-a,
 a:link,
 a:visited {
-    color: rgb(90,220,255);
+    color: rgb(60, 120, 250);
     text-decoration: underline;
 }
 a:visited {
-    color: rgb(60,170,220);
+    color: rgb(80, 100, 255);
 }
 h1,h2,h3,h4,h5,h6 {
     font: normal 400 100% 'Verdana';
@@ -37,23 +37,6 @@ h3 {
     font-weight: 400;
     font-size: 1.5em;
 }
-button {
-    display: inline-block;
-    border:0; margin:0;
-    position: relative;
-    left: 0; top: -2px;
-    padding: 2px 8px 4px;
-    min-width: 80px;
-    color: black;
-    font: 16px 'Tahoma';
-    background: rgb(0,128,128);
-    box-shadow: 3px 4px 0px rgba(0,0,0,.75);
-}
-button:focus,
-button:active {outline: none}
-button:active {
-    box-shadow: none;
-}
 body > div {
     z-index: 1;
     padding: 48px 12px;
@@ -67,7 +50,15 @@ footer {
     height: 36px;
     background: rgba(255,255,255,.8);
     color: black;
-    box-shadow: 0 0 10px red;
+    box-shadow: 0 0 5px gray;
+    font-size: 12px;
+    line-height: 36px;
 }
 header {top: 0}
 footer {bottom: 0}
+
+header > a,
+footer > a {
+    float: left;
+    margin: 0 6px;
+}

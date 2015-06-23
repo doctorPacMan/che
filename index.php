@@ -2,9 +2,16 @@
 error_reporting(E_ALL);
 ini_set ('display_errors', '1');
 
-ini_set ('mysql.default_host', '127.0.0.1');
-ini_set ('mysql.default_user', 'root');
-ini_set ('mysql.default_password', '');
+define('ROOT', dirname(__FILE__).DIRECTORY_SEPARATOR);
+define('HTTP', '//'.$_SERVER['SERVER_NAME']);
+
+ini_set('mysql.default_host', '127.0.0.1');
+ini_set('mysql.default_user', 'root');
+ini_set('mysql.default_password', '');
+
+ini_set('session.save_path', ROOT."tmp/session");
+if(session_id()==='') session_start();
+define('SSID', session_id());
 
 //=================================================================
 // parse url
@@ -14,9 +21,6 @@ if (isset($_SERVER["REQUEST_URI"])) {
 	$URL_PARAMS = preg_split("/\//", $URL_PARAMS[0], -1, PREG_SPLIT_NO_EMPTY);
 } else $URL_PARAMS = array();
 
-define('ROOT', dirname(__FILE__).DIRECTORY_SEPARATOR);
-define('HTTP', '//'.$_SERVER['SERVER_NAME']);
-
 if(0) {
 	echo('<pre>');
 	echo(ROOT.'<br />'.HTTP.'<hr />');
@@ -25,6 +29,8 @@ if(0) {
 	echo('<hr />'.print_r($URL_PARAMS,true));
 	echo('</pre>');
 }
-else require(ROOT.'etc/init.php');
-//require(ROOT.'etc/service.php');
+else {
+	require(ROOT.'etc/init.php');
+	require(ROOT.'etc/service.php');
+}
 ?>
