@@ -1,10 +1,15 @@
  <?
 Class DB {
-	var $host = '127.0.0.1';
-	var $name = 'test';
-	var $user = 'root';
-	var $pass = '';
+	//var $host = '127.0.0.1';
+	//var $name = 'test';
+	//var $user = 'root';
+	//var $pass = '';
+	var $host = 'u440306.mysql.masterhost.ru';
+	var $user = 'u440306';
+	var $pass = 'vI_7.O3ieS';
+	var $name = 'u440306';
 	var $link;
+
 	function DB($name, $user=null, $pass=null){
     	// $dblink = mysql_connect ($DB["server"], $DB["login"], $DB["password"]) or die("Could not connect : " . mysql_error());
     	
