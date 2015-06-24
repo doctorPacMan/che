@@ -62,3 +62,14 @@ footer > a {
     float: left;
     margin: 0 6px;
 }
+pre {
+    font: 11px Courier;
+}
+.wrpr {
+    outline: 0px solid rgba(0,0,0,.1);
+    background: white;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    width: 600px;
+    margin: 24px auto;
+}

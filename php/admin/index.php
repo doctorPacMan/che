@@ -1,5 +1,4 @@
 <?
-require(ROOT.'php/class.db.php');
 //$DB = new DB('cherio','root','');
 $DB = new DB('cherio');
 if(0) $DB->addData('users', array (

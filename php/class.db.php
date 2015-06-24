@@ -4,21 +4,17 @@ Class DB {
 	//var $name = 'test';
 	//var $user = 'root';
 	//var $pass = '';
-	var $host = 'u440306.mysql.masterhost.ru';
-	var $user = 'u440306';
-	var $pass = 'vI_7.O3ieS';
-	var $name = 'u440306';
 	var $link;
 
 	function DB($name, $user=null, $pass=null){
     	// $dblink = mysql_connect ($DB["server"], $DB["login"], $DB["password"]) or die("Could not connect : " . mysql_error());
     	
+    	$this->host = null;
     	$this->name = $name;
     	$this->user = $user;
     	$this->pass = $pass;
     	$this->link = mysql_connect($this->host,$this->user,$this->pass) or die("Could not connect : " . mysql_error());
 		mysql_select_db($this->name) or die("Could not select database");
-    	// $this->dblink = $this->Connect();
 
 	}
 	function Connect() {
@@ -30,19 +26,9 @@ Class DB {
 	}
 	// ============================================================================= Get
 	function getDataAll($table) {
-		$query = "SELECT * FROM ".$table;
-		$req = mysql_query($query) or die("Query failed : " . mysql_error());
-		$res = array();
-	    while ($line = mysql_fetch_array($req, MYSQL_ASSOC)) {
-			// echo "<pre>".print_r($line,true)."</pre><hr>";
-    	    array_push($res, $line);
-		}
-    	mysql_free_result($req);
-		mysql_close($this->link);
-		//echo "<h4>RES:</h4><pre>".print_r($res,true)."</pre>";
-		return $res;
+		return $this->getData($table, null);
 	}
-	function getData($table, $where=false){
+	function getData($table, $where=null){
 	    if ($where) $query = "SELECT * FROM ".$table." WHERE ".$where."";
     	else $query = "SELECT * FROM ".$table;
 
@@ -55,16 +41,12 @@ Class DB {
 	}
 	// ============================================================================= Add
 	function addData($table,$data){
-	    $Fstring="`".key($data)."`"; 
-    	$Cstring="'".$data[key($data)]."'";
 
-    	foreach ($data as $field => $dcont) {
-    		if($Cstring!="'".$dcont."'"){
-	    		$Fstring.=", `".$field."`";
-	    		$Cstring.=", '".$dcont."'";
-    		}
-	    }
-	    $query="INSERT INTO ".$table."(".$Fstring.") VALUES (".$Cstring.")";
+		$flds = array(); $vals = array();
+		foreach ($data as $f => $v) {array_push($flds, '`'.$f.'`');array_push($vals, $v);}
+		$flds = implode(', ',$flds); $vals = implode(', ',$vals); 
+
+	    $query = "INSERT INTO `".$table."` (".$flds.") VALUES (".$vals.")";
     	$result = mysql_query($query) or die("Query failed : " . mysql_error());
 	    @mysql_free_result($result);
 	}
