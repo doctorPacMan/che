@@ -1,13 +1,5 @@
 <?
-//$DB = new DB('cherio','root','');
-$DB = new DB('cherio');
-if(0) $DB->addData('users', array (
-	'login' => 'loginn',
-    'password' => 'pass'
-    ));
-$data = $DB->getData('users');
-echo "<pre>".print_r($data,true)."</pre><hr>";
-
-//$Smarty->assign('data','admin/main.tpl');
-//$Smarty->display('admin/main.tpl');
+if(empty($URL_PARAMS[1])) {}
+else if($URL_PARAMS[1]=='users') require(ROOT.'php/admin/users.php');
+else if($URL_PARAMS[1]=='pets') require(ROOT.'php/admin/pets.php');
 ?>

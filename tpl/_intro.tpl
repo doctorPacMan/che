@@ -17,9 +17,4 @@
 
 </head>
 <body>
-<header>
-	<a href="/auth/enter/">Login</a>
-	<a href="/auth/register/">Register</a>
-	<a>{$SSID}</a>
-</header>
 <div>

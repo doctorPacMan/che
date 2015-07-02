@@ -8,14 +8,11 @@ define('HTTP', '//'.$_SERVER['SERVER_NAME']);
 ini_set('mysql.default_host', 'localhost');
 ini_set('mysql.default_user', 'root');
 ini_set('mysql.default_password', '');
+ini_set('session.save_path', ROOT."tmp/session");
 
 // ini_set('mysql.default_host', 'u440306.mysql.masterhost.ru');
 // ini_set('mysql.default_user', 'u440306');
 // ini_set('mysql.default_password', 'vI_7.O3ieS');
-
-ini_set('session.save_path', ROOT."tmp/session");
-if(session_id()==='') session_start();
-define('SSID', session_id());
 
 //=================================================================
 // parse url
