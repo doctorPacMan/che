@@ -1,6 +1,8 @@
 <?
-
 ini_set('session.save_path', ROOT.'tmp/session');
+ini_set('session.use_cookies', '1');
+ini_set('session.use_only_cookies', '1');
+ini_set('session.auto_start', '0');
 ini_set('mysql.default_host', 'localhost');
 ini_set('mysql.default_user', 'root');
 ini_set('mysql.default_password', '');
@@ -26,7 +28,12 @@ require(ROOT.'php/class.db.php');
 require(ROOT.'php/class.user.php');
 
 $DB = new DB('u440306');
-$User = new cUser();
 
-// die("<hr>");
+//=================================================================
+// Session start
+//=================================================================
+if(session_id() == '') session_start();
+define('SSID', session_id());
+if(!empty($_SESSION['user'])) $Smarty->assign('User',$_SESSION['user']);
+else $Smarty->assign('User',null);
 ?>

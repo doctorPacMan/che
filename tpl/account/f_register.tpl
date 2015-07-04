@@ -1,6 +1,6 @@
 <form class="wrpr" action="./" name="rgstr" method="post">
 	<h3>Register</h3>
-	<input type="hidden" name="action" value="rgstr" />
+	<input type="hidden" name="action" value="regster" />
 	<fieldset>
 		<label for="login">Login</label>
 		<input type="text" autocomplete="off" name="login" />

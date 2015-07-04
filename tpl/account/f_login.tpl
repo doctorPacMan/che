@@ -3,11 +3,11 @@
 	<input type="hidden" name="action" value="login" />
 	<fieldset>
 		<label for="login">Login</label>
-		<input type="text" name="login" />
+		<input autocomplete="off" type="text" name="login" />
 	</fieldset>
 	<fieldset>
 		<label for="password">Password</label>
-		<input type="text" name="password" />
+		<input autocomplete="off" type="text" name="password" />
 	</fieldset>
 	<fieldset><input type="submit" /></fieldset>
 </form>
