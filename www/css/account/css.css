@@ -1,1 +1,16 @@
 @import '/css/css.css';
+.errlist,
+.errlist li {
+	padding: 0;
+	margin: 0;
+}
+.errlist {
+	max-width: 560px;
+	padding: 6px 12px 6px 28px;
+	margin: 0 auto;
+	border: 1px solid black;
+	background-color: rgb(242, 222, 222);
+	border-color: rgb(235, 204, 209);
+	color: rgb(169, 68, 66);
+	box-shadow: 0 1px 3px -2px red;
+}

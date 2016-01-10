@@ -14,8 +14,8 @@
 </head>
 <body>
 <ul>
-	<li class="in">Menuitem</li>
-	<li>Menuitem</li>
-	<li>Menuitem</li>
+	<li><a href="/account/">Main</a></li>
+	<li><a href="/account/user/">Account</a></li>
+	<li><a href="/account/heroes/">Heroes</a></li>
 </ul>
 <div>

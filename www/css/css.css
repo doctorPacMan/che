@@ -56,9 +56,15 @@ body > ul {
     width: 160px;
 }
 body > ul li {
-    background: gray;
-    padding: 6px 10px;
     margin: 1px 0;
+}
+body > ul li a:link,
+body > ul li a:visited {
+    display: block;
+    padding: 6px 10px;
+    color: white;
+    background: rgb(66, 139, 202);
+    text-decoration: none;
 }
 header,
 footer {

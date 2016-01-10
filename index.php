@@ -9,6 +9,7 @@ ini_set('mysql.default_host', 'localhost');
 ini_set('mysql.default_user', 'root');
 ini_set('mysql.default_password', '');
 ini_set('session.save_path', ROOT."tmp/session");
+ini_set('session.use_cookies', '1');
 
 // ini_set('mysql.default_host', 'u440306.mysql.masterhost.ru');
 // ini_set('mysql.default_user', 'u440306');
@@ -32,6 +33,7 @@ if(0) {
 }
 else {
 	require(ROOT.'etc/init.php');
+	require(ROOT.'etc/session.php');
 	require(ROOT.'etc/service.php');
 }
 ?>
