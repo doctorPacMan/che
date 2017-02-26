@@ -1,0 +1,144 @@
+.daygrid {
+	outline: 1px solid dodgerblue;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: relative;
+}
+.daygrid > div {
+	position: relative;
+}
+.daygrid .dg-blank {
+	position: fixed;
+	z-index: 5;
+	height: 79px;
+	width: 220px;
+	background: #e2e2e2;
+	background: white;
+	line-height: 79px;
+	text-align: center;
+	border-right: 1px solid #e2e2e2;
+	border-bottom: 1px solid rgb(142,204,243);
+}
+
+.daygrid .dg-mons {
+	position: fixed;
+	z-index: 5;
+	height: 40px;
+	width: calc(100% - 220px - 17px);
+	margin-left: 220px;
+	line-height: 39px;
+	background: whitesmoke;
+}
+
+.daygrid .dg-grid {
+	position: relative;
+	z-index: 1;
+	padding: 80px 0 0 220px;
+	min-height: 200px;
+	background: rgba(0,90,0,0);
+}
+.daygrid .dg-dayz,
+.daygrid .dg-rumz {
+	position: absolute;
+	left: 0px;top: 0px;
+	z-index: 2;
+	background: white;
+	box-shadow: 0 0 3px rgba(0,0,0,0);
+}
+.daygrid .dg-dayz {
+	left:220px;
+	right: 0;
+	padding-top: 40px;
+	height: 40px;
+}
+.daygrid .dg-rumz {
+	width: 220px;
+	padding-top: 80px;
+	border-right: 1px solid #e2e2e2;
+}
+.rumgroup,
+.rumplace {
+	display:block;
+	height: 39px;
+	line-height: 39px;
+	padding: 0 0 0 15px;
+	border-bottom: 1px solid rgb(142,204,243);
+}
+.rumgroup {
+	font-weight: bold;
+	color: rgb(45,146,214);
+}
+.rumplace {
+	padding-left: 30px;
+}
+
+
+ul.gridrow,
+ul.gridrow > li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height: 40px;
+}
+ul.gridrow {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}
+ul.gridrow > li {
+	height: 40px;
+	border: 1px solid transparent;
+	border-width: 0 0 1px 0px;
+	border-bottom-color: rgb(142,204,243);
+	box-shadow: inset 1px 0 0 0px #e2e2e2;
+	min-width: 64px;
+	position: relative;
+	line-height: 38px;
+	text-align: center;
+	box-sizing: border-box;
+}
+ul.gridrow > li span {
+	display: block;
+	position: relative;
+	height: 100%;
+	line-height: 38px;
+}
+ul.gridrow > li dfn {
+	display: block;
+	white-space: nowrap;
+	font: 11px/12px monospace;
+	color: rgb(200,200,200);
+}
+
+ul.gridrow > li {
+	width: 100%;
+	max-width: 180px;
+}
+section[data-range="8"] ul.gridrow > li:nth-child(n+9) {display: none}
+section[data-range="15"] ul.gridrow > li:nth-child(n+16) {display: none}
+section[data-range="22"] ul.gridrow > li:nth-child(n+23) {display: none}
+section[data-range="29"] ul.gridrow > li:nth-child(n+30) {display: none}
+section[data-range="36"] ul.gridrow > li:nth-child(n+37) {display: none}
+
+ul.gridrow-th > li {background: white}
+ul.gridrow-rg {
+	color: rgb(45,146,214);
+}
+ul.gridrow-dt > li.wknd {
+	background-color:rgb(234,245,251);
+}
+ul.gridrow-dt > li.tday {}
+ul.gridrow-dt > li.tday:before {
+	content: '';
+	position:absolute;
+	left:50%;top:-1px;
+	bottom:-1px;
+	width: 2px;
+	margin-left: -1px;
+	background:rgb(151,201,234);
+}
+

@@ -1,0 +1,9 @@
+.gest {
+	position: absolute;
+	left: 50%; top:0px;
+	height: 100%;
+	width: 300%;
+	z-index: 2;
+	background: rgba(0,0,0,.66);
+	color: white;
+}

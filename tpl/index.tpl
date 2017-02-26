@@ -1,5 +1,4 @@
-{include file='_intro.tpl'}
-{* <div class="pop">popup</div> *}
+{* include file='_intro.tpl'}
 <button>Button</button>
 
 {section loop=6 name='heder'}
@@ -19,4 +18,4 @@
 <h2>h2</h2>
 <p>Трехкомпонентное образование, по определению, заманчиво. Благодаря открытию радиоактивности ученые окончательно убедились, что пламя ударяет энергетический подуровень. При погружении в жидкий кислород конформация кисло титрует раствор.</p>
 
-{include file='_outro.tpl'}
+{include file='_outro.tpl' *}

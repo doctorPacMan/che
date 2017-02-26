@@ -1,0 +1,90 @@
+.gameboard {
+	position: relative;
+	overflow: hidden;
+	height: 450px;
+	width: 800px;
+	margin: 10px auto;
+	outline: 1px solid dodgerblue;
+}
+.petpanel {
+	position: absolute;
+	bottom:0; left:0px;
+	margin: 12px;
+	width: 356px;
+	height: 64px;
+	background: rgba(255,255,255,.75);
+	border-radius: 32px;
+	box-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+.petpanel > ins {
+	overflow: hidden;
+	position: absolute;
+	left:0; right: 0px;
+	top:0; height:12px;
+	margin: -12px 32px 0;
+	border-radius: 8px 8px 0 0;
+	background: rgba(0,0,0,.25);
+}
+.petpanel > ins > i,
+.petpanel > ins > s {
+	position: absolute;
+	left:0; width:100%;
+	top:0; height:100%;
+	text-align: center;
+}
+.petpanel > ins > s {
+	background: green;
+	width: 75%;
+}
+.petpanel > ins > i {
+	font: normal normal 10px/12px monospace;
+	color: white;
+}
+.petpanel > img {
+	height: 100%;
+	width: auto;
+	border-radius: 50%;
+	float: left;
+}
+.petpanel > button {
+	float: left;
+	display: inline-block;
+	position: relative;
+	width: 56px;
+	height: 56px;
+	padding: 0;
+	margin: 4px;
+	background: green none no-repeat 50% 50%;
+	background-image: url('/img/spell.jpg');
+	box-shadow: inset 0 0 2px 1px rgba(255,255,255,.75);
+	color: white;
+	font: 12px monospace;
+	text-shadow: 0 0 1px black;
+	border: 2px solid gray;
+	border-radius: 5px;
+	border-color: #999 #666 #333 #666;
+	overflow: hidden;
+}
+.petpanel > button:after {
+	content: '';
+	position: absolute;
+	left:0; width:100%;
+	top:0; height:100%;
+	background: rgba(0,0,0,.05);
+	background-image: linear-gradient(160deg, rgba(255,255,255,.6) 25%, rgba(255,255,255,0) 75%, transparent);
+}
+
+.petpanel.rgt {
+	left: auto;
+	right: 0px;
+	text-align
+}
+.petpanel.rgt > img {
+	float: right;
+}
+.petpanel.rgt > button {
+	float: right;
+}
+.petpanel.rgt > ins > s {
+left:auto;right: 0;
+}

@@ -1,0 +1,24 @@
+.selectah {
+	position: relative;
+	display: inline-block;
+	background: lightyellow;
+	border: 1px solid gray;
+	width: 178px;
+	height: 28px;
+}
+.selectah > select {
+
+}
+.selectah > ol,
+.selectah > ol li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.selectah > ol {
+	position: absolute;
+	left:-1px;top:100%;
+	width: 100%;
+	background: lightblue;
+	border: 1px solid darkcyan;
+}

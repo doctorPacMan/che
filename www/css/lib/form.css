@@ -1,4 +1,9 @@
-button {
+button:focus,
+button:active {
+    outline: none;
+    box-shadow: none;
+}
+form button {
     display: inline-block;
     border:0; margin:0;
     position: relative;
@@ -10,12 +15,6 @@ button {
     background: rgb(0,128,128);
     box-shadow: 3px 4px 0px rgba(0,0,0,.75);
 }
-button:focus,
-button:active {
-    outline: none;
-    box-shadow: none;
-}
-
 form {
     outline: 0px solid rgba(0,0,0,.1);
     background: white;

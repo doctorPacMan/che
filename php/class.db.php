@@ -34,6 +34,8 @@ Class DB {
 	    $query.= " (".$flds.") VALUES (".$vals.")";
 		$result = $this->query($query);
 	    @mysql_free_result($result);
+
+	    return $query;
 	}
 	// ============================================================================= Edit
 	function editData($table, $where, $data){
